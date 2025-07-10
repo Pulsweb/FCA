@@ -33,7 +33,6 @@ eventstream Data Traffic Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
 Eventstream Data Traffic per GB Capacity Usage CU,Represents the data ingress and egress usage on your capacity,GA,FALSE,TRUE,Fabric CU
 Eventstream Flat,Represents Eventstream Row Level Flat EV your capacity,GA,FALSE,TRUE,Fabric CU
 Eventstream Flat Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
-Eventstream Flat Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
 Eventstream Processor Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
 Eventstreams Processor Capacity Usage CU,Represents the ASA processing usage on your capacity,GA,FALSE,TRUE,Fabric CU
 Fabric Capacity CU,,GA,FALSE,TRUE,Fabric CU
@@ -78,7 +77,6 @@ Spark Memory Optimized Capacity Usage CU,Represents the Spark usage on your capa
 SQL Backup Storage Data Stored,,GA,FALSE,FALSE,OneLake
 SQL database in Microsoft Fabric,Represents SQL database in Microsoft Fabric on your capacity,GA,FALSE,TRUE,Fabric CU
 SQL database in Microsoft Fabric Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
-SQL Storage Data Stored,,GA,FALSE,FALSE,OneLake
 SQL Storage Data Stored,,GA,FALSE,FALSE,OneLake
 Storage Mirroring Data Stored,,GA,FALSE,FALSE,OneLake
 Storage Mirroring Free Data Stored,,GA,FALSE,FALSE,OneLake
