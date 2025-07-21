@@ -1,6 +1,4 @@
-![image-20250721165331549](C:\Users\romainca\AppData\Roaming\Typora\typora-user-images\image-20250721165331549.png)
-
- 
+![image-20250721165331549](/media/FCA.png)
 
 **Solution accelerator for Fabric platform to monitor cost**
 
@@ -26,11 +24,9 @@ IMAGE: ARCHITECTURE (Will be reused in the Support Page)
 
 FCA extracts the following data:
 
-·    Azure Cost in FOCUS (x version)
-
-·    Enriched data (Git Connections)
-
-·    Azure Cost of Reservations (Next version)
+- Azure Cost in FOCUS (x version)
+- Enriched data (Git Connections)
+- Azure Cost of Reservations (Next version)
 
  
 
@@ -49,9 +45,8 @@ FCA extracts the following data:
 
 Are you ready to try CSA? We have prepared two step-by-step documentations, which help you to deploy CSA in your workspace to your tenant:
 
-\-     Click here to deploy FCA
-
-\-     Click here to update FCA
+- Click here to deploy FCA
+- Click here to update FCA
 
 ### Support
 
@@ -65,6 +60,5 @@ Important: Support tickets should not be opened for issues related to these temp
 
 ### Other helpful resources
 
-\-     Demo Recorded
-
-\-     …
+- Demo Recorded
+- …
