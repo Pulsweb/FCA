@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Focus",
+    "id": "1afa5fb6-49eb-4aa5-9430-fa0358d6f502"
+  },
+  {
+    "name": "FCA.Lakehouse",
+    "id": "81be0fb4-007a-41d0-bb5d-421ae73d9fbb"
+  },
+  {
+    "name": "01_Load_Focus.Notebook",
+    "id": "bb2efa67-1e55-4977-a967-acc9aaf9b1a6"
+  },
+  {
+    "name": "Generate_Calendar_Table.Notebook",
+    "id": "8bb5aa79-071e-4c9e-b73c-ea6a8d618bca"
+  },
+  {
+    "name": "Lakehouse_Optimization.Notebook",
+    "id": "4ba4795f-7017-4507-8ba6-b0431e25230d"
+  },
+  {
+    "name": "01_Load_Meters.Notebook",
+    "id": "398b3aee-15f2-4fe0-baa8-4fd06d4f341d"
+  },
+  {
+    "name": "FCA_Core_SM.SemanticModel",
+    "id": "26c9f0b0-fc20-4eaf-8309-b38bba897b6e"
+  },
+  {
+    "name": "FCA_Core_Report.Report",
+    "id": "c7057e8a-244b-4b86-8f43-1a340c17e9fb"
+  },
+  {
+    "name": "Load FCA E2E.DataPipeline",
+    "id": "2e175895-f57d-46ff-9efc-6135ad8ac9ce"
+  }
+]

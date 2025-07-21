@@ -1,0 +1,90 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "Focus Data",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Load Meters",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "bb2efa67-1e55-4977-a967-acc9aaf9b1a6",
+          "workspaceId": "1afa5fb6-49eb-4aa5-9430-fa0358d6f502",
+          "parameters": {
+            "fromMonth": {
+              "value": {
+                "value": "@pipeline().parameters.FromMonth",
+                "type": "Expression"
+              },
+              "type": "int"
+            },
+            "toMonth": {
+              "value": {
+                "value": "@pipeline().parameters.ToMonth",
+                "type": "Expression"
+              },
+              "type": "int"
+            }
+          },
+          "sessionTag": "fca"
+        }
+      },
+      {
+        "name": "Calendar Data",
+        "type": "TridentNotebook",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "8bb5aa79-071e-4c9e-b73c-ea6a8d618bca",
+          "workspaceId": "1afa5fb6-49eb-4aa5-9430-fa0358d6f502",
+          "sessionTag": "fca"
+        }
+      },
+      {
+        "name": "Load Meters",
+        "type": "TridentNotebook",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "398b3aee-15f2-4fe0-baa8-4fd06d4f341d",
+          "workspaceId": "1afa5fb6-49eb-4aa5-9430-fa0358d6f502",
+          "sessionTag": "fca"
+        }
+      }
+    ],
+    "parameters": {
+      "FromMonth": {
+        "type": "int",
+        "defaultValue": 0
+      },
+      "ToMonth": {
+        "type": "int",
+        "defaultValue": 0
+      }
+    }
+  }
+}
