@@ -110,7 +110,7 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 
 ### 3 - Run the Pipeline
 
-- Download and import the **[Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
+- Download and import the **[00_Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/00_Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
 - Click "Run All" in the Notebook
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifacts
 - Open the **Load FCA E2E** Data pipeline and Run the Pipeline once
