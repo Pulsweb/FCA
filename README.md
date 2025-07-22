@@ -28,8 +28,10 @@ FCA is fully developed utilizing Fabric capabilities, with Pipelines and Noteboo
 
 FCA gathers diverse data in Lakehouse to provide cost insights:
 - FCA extracts Azure Cost in [FOCUS](https://focus.finops.org/) format (a Unified Standard for Cloud Billing Data)
-- FCA extracts Azure Reservations details
 - FCA extracts enriched Microsoft Learn documentation data
+- (optional) FCA extracts Azure Reservations details
+
+ℹ️ Azure Cost export is available for various Azure account types, including Enterprise Agreement (EA) and Microsoft Customer Agreement (MCA) customers. To view the full list of supported account types, see [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data). The Reader Azure permissions is sufficient to exports cost based on the scope, see [Understand and work with scopes](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes).
 
 ### FCA Outputs
 
@@ -52,15 +54,17 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 Are you ready to try FCA? Let's follow these simple steps:
 
-### 1 - Configure export of FOCUS Data
+### 1 - Configure export 
+
+#### 1.1 - FOCUS Data
 
 To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)), an Azure Data Lake Storage Gen2 will be required ([Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account)).
 
 ℹ️ FCA will retain only data related to fabric costs.
 
 Once Data Lake Gen 2 storage account created here are the high levels steps to create an export:
-- Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**.
-- Select the required scope and select **Exports** in the left navigation menu.
+- Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**
+- Select the required scope and select **Exports** in the left navigation menu
 - Select **+ Create**
 - On the Basics tab, select the template = **Cost and usage (FOCUS)**
 
@@ -82,6 +86,14 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 
 - On the Review + Create tab, select **Create**
 - Run the export by selecting **Run now** on the export page
+
+#### 1.2 - (Optional) Reservation Data
+
+To create reservation export, on the Azure portal , search for **Cost Management**
+- Select the required scope and select **Exports** in the left navigation menu
+- Select **+ Create**
+- On the Basics tab, select the template = **Reservation ???**
+- 
 
 ### 2 - Configure Fabric items
 
