@@ -30,7 +30,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 - FCA extracts Azure Cost in [FOCUS](https://focus.finops.org/) format (a Unified Standard for Cloud Billing Data)
 - FCA extracts Azure Reservations details
-- FCA extracts enriched MSLEARN documentation data
+- FCA extracts enriched Microsoft Learn documentation data
 
 ### FCA Outputs
 
@@ -88,13 +88,13 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 ### 2 - Configure Fabric
 
 - Create a new workspace "FCA" (name can be changed), which is backed by a P or F-capacity
-- (**Optional**) Download the [Workspace logo](https://github.com/Pulsweb/FCA/blob/main/media/FCA Logo Small.png) and add the logo to the workspace
+- Download the ([Workspace logo](https://github.com/Pulsweb/FCA/blob/main/media/FCA%20Logo%20Small.png)) and add the logo to the workspace
 - Create a new Lakehouse "FCA" on the workspace ([Create a lakehouse in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse))
 - Create a new File Shortcut on the Lakehouse ([Create an Azure Data Lake Storage Gen2 shortcut](https://learn.microsoft.com/en-us/fabric/onelake/create-adls-shortcut))
   - Select the ellipsis (**...**) next to **Files**
   - Select **New shortcut**
   - Select Azure Data Lake Storage Gen 2 and provide the following settings:
-    - URL = **Data Lake Storage** URL of the Data Lake storage account. To get the Data Lake Storage URL, view the storage account where the export created a directory and the FOCUS cost file. Under **Settings**, select **Endpoints**. Copy the URL marked as **Data Lake Storage** it should look like this: https://###.dfs.core.windows.net.
+    - URL = **Data Lake Storage** URL of the Data Lake storage account. To get the Data Lake Storage URL, view the storage account where the export created a directory and the FOCUS cost file. Under **Settings**, select **Endpoints**. Copy the URL marked as **Data Lake Storage** it should look like this: *https://###.dfs.core.windows.net*.
     - Connection = **Create a new connection**
     - Connection name = <*Any name of your choice*>
     - Authentication kind = **Organizational account**
