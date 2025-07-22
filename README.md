@@ -123,7 +123,7 @@ With a Data Agent on top of the FCA you can query in natural language Fabric Cos
 
 Since it's required additional prerequisites, we made it optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
 
-Below the step to create the Data Agent:
+Steps to create the Data Agent:
 - Open the **02_Create_DataAgent** Notebook
 - Click "Run All" in the Notebook
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifact *FCA_Agent* and open it to chat with your data
