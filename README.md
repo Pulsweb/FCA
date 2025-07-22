@@ -6,7 +6,7 @@ The solution aims to facilitate the understanding and monitoring of the Microsof
 
 Customers may not always clearly distinguish between costs that are included or excluded within the Data Platform, the handling of reservations (particularly those not rationalized within a defined scope), or their capacity usage. They may also need guidance on strategies for optimizing resources and implementing effective FinOps practices, including chargeback and show back to stakeholders. This free solution was developed in France by several passionate CSA experts in FinOps and Data: [Cedric Dupui](https://www.linkedin.com/in/cdupui/), [Manel Omani](https://www.linkedin.com/in/mlomani/), [Antoine Richet](https://www.linkedin.com/in/antoine-richet-22a44021/), and led by [Romain Casteres](https://www.linkedin.com/in/casteres/) inspired by his Blog article [FinOps for Microsoft Fabric](https://www.linkedin.com/pulse/finops-microsoft-fabric-romain-casteres-hc6ee/?trackingId=xFSs0xHqR0OheUQ7Tqn9mw%3D%3D).
 
-IMAGE: ANSWERING ALL ENONCED PROBLEM
+![FCA](./media/FCA-Solution.png)
 
 ## Introduction
 
@@ -85,7 +85,7 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 - On the Review + Create tab, select **Create**
 - Run the export by selecting **Run now** on the export page
 
-### 2 - Configure Fabric
+### 2 - Configure Fabric items
 
 - Create a new workspace "FCA" (name can be changed), which is backed by a P or F-capacity
 - Download the ([Workspace logo](https://github.com/Pulsweb/FCA/blob/main/media/FCA%20Logo%20Small.png)) and add the logo to the workspace
@@ -110,7 +110,7 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 
 ![FCA](./media/Setup-Export5.png)
 
-### 3 - Configure Fabric
+### 3 - Run the Pipeline
 
 - Download and import the **[Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
 - Click "Run All" in the Notebook
