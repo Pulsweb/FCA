@@ -50,7 +50,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 ## Setup
 
-Are you ready to try FCA? Let's follow these simple 5 steps:
+Are you ready to try FCA? Let's follow these simple steps:
 
 ### 1 - Configure export of FOCUS Data
 
@@ -116,6 +116,15 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 - Open the **Load FCA E2E** Data pipeline and Run the Pipeline once
 
 ℹ️ The pipeline can be scheduled for daily loads ([Scheduled data pipeline runs](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs#scheduled-data-pipeline-runs)).
+
+### 4 - (Optional) Create the Data Agent
+
+With a Data Agent on top of the FCA you can query in natural language Fabric Cost.
+
+Since it's required additional prerequisites, we made it optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
+
+
+
 
 ### Support
 
