@@ -27,7 +27,6 @@ FCA is fully developed utilizing Fabric capabilities, with Pipelines and Noteboo
 ### FCA Inputs
 
 FCA gathers diverse data in Lakehouse to provide cost insights:
-
 - FCA extracts Azure Cost in [FOCUS](https://focus.finops.org/) format (a Unified Standard for Cloud Billing Data)
 - FCA extracts Azure Reservations details
 - FCA extracts enriched Microsoft Learn documentation data
@@ -60,7 +59,6 @@ To create an export (Create [Cost Management exports](https://learn.microsoft.co
 ℹ️ FCA will retain only data related to fabric costs.
 
 Once Data Lake Gen 2 storage account created here are the high levels steps to create an export:
-
 - Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**.
 - Select the required scope and select **Exports** in the left navigation menu.
 - Select **+ Create**

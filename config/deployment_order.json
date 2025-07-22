@@ -32,6 +32,10 @@
     "id": "c7057e8a-244b-4b86-8f43-1a340c17e9fb"
   },
   {
+    "name": "02_Create_DataAgent",
+    "id": "c7057e8a-244b-4b86-8f43-1a340c17e9fa"
+  },
+  {
     "name": "Load FCA E2E.DataPipeline",
     "id": "2e175895-f57d-46ff-9efc-6135ad8ac9ce"
   }
