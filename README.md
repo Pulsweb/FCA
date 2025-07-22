@@ -22,7 +22,7 @@ FCA is fully developed utilizing Fabric capabilities, with Pipelines and Noteboo
 
 ### Architecture
 
-IMAGE: ARCHITECTURE (Will be reused in the Support Page)
+![FCA](./media/FCASolutionArchitecture.png)
 
 ### FCA Inputs
 
