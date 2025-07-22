@@ -12,11 +12,11 @@
     "id": "bb2efa67-1e55-4977-a967-acc9aaf9b1a6"
   },
   {
-    "name": "Generate_Calendar_Table.Notebook",
+    "name": "01_Load_Calandar.Notebook",
     "id": "8bb5aa79-071e-4c9e-b73c-ea6a8d618bca"
   },
   {
-    "name": "Lakehouse_Optimization.Notebook",
+    "name": "03_Optimization.Notebook",
     "id": "4ba4795f-7017-4507-8ba6-b0431e25230d"
   },
   {

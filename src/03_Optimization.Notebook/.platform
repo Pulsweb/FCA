@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "Notebook",
-    "displayName": "Lakehouse_Optimization",
-    "description": "New notebook"
+    "displayName": "03_Optimization",
+    "description": "03_Optimization"
   },
   "config": {
     "version": "2.0",
