@@ -27,45 +27,54 @@ table fca
 		changedProperty = IsHidden
 
 	measure #CapacityPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE(),fca[CommitmentDiscountType]<>"Reservation")+0
-		formatString: 0
+		formatString: 0.00
 		lineageTag: e739fabf-5c72-4db9-9c58-c0c8e018373a
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
+		changedProperty = FormatString
+
 	measure #CostWithoutRI = SUM(fca[CommitmentSavings]) + [#TotalCost]
+		formatString: 0.00
 		lineageTag: 5e359efb-c7c6-4887-8f0c-797bedf82afe
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
+		changedProperty = FormatString
+
 	measure #OneLake = CALCULATE(SUM(fca[EffectiveCost]),meters[Category]="OneLake")
+		formatString: 0.00
 		lineageTag: 7e8285be-14f6-4663-9d49-f5183b8ca80d
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		changedProperty = FormatString
 
 	measure #OtherPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=FALSE(), meters[Category]="Fabric CU")+0
-		formatString: 0
+		formatString: 0.00
 		lineageTag: c190a166-984d-4729-a7dc-f4de903108ad
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
+		changedProperty = FormatString
+
 	measure #PauseCost = CALCULATE(SUM(fca[EffectiveCost]),fca[BillingType]="Capacity Pause/Delete Surcharge") + 0
+		formatString: 0.00
 		lineageTag: d8b89ec9-27f2-4aca-8d6c-35787778d176
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		changedProperty = FormatString
 
 	measure #ProvisionedCapacity = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE())
 		formatString: 0
@@ -76,34 +85,34 @@ table fca
 		changedProperty = IsHidden
 
 	measure #Reservation = CALCULATE(SUM(fca[EffectiveCost]),fca[CommitmentDiscountType]="Reservation",meters[Included]=TRUE())+0
-		formatString: 0
+		formatString: 0.00
 		lineageTag: 25adad74-50b7-4a4e-bd58-741a65f35ba5
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
+		changedProperty = FormatString
+
 	measure #TotalCost = CALCULATE(SUM(fca[EffectiveCost]))
+		formatString: 0.00
 		lineageTag: 526c4716-9009-4d64-bf6b-b35036b22651
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		changedProperty = FormatString
 
 	measure #UsageRatioCapacity = Divide([#AvailableCapacity],[#ProvisionedCapacity])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 87bdfc32-0142-4217-94ff-6c0ee7738be6
 
 		changedProperty = Name
 
 		changedProperty = IsHidden
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure Measure = 1
-		formatString: 0
-		lineageTag: f67fda57-be05-4829-b3a0-7534d8c7eaad
+		changedProperty = FormatString
 
 	column BilledCost
 		dataType: double

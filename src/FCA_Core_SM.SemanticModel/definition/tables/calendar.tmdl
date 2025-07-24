@@ -1,6 +1,39 @@
 table calendar
 	lineageTag: 70bb4cbc-9b0c-45fd-93de-64fd3fbe8408
 	sourceLineageTag: [dbo].[calendar]
+	dataCategory: Time
+
+	measure 'Reservation %' = DIVIDE( [#Reservation], [#TotalCost])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 07901cd1-e387-457e-b861-0fcfa0901b47
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'PauseCost %' = DIVIDE( [#PauseCost], [#CapacityPAYG])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3c913747-fa14-4861-bb53-f72504573826
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure #SparkAutoScale = CALCULATE([#OtherPAYG], meters[Name]= "autoscale for Spark Capacity Usage CU")
+		formatString: 0.00
+		lineageTag: cb1772af-2ede-49b1-a23d-b67ac9320a09
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+	measure 'SparkAutoScale %' = DIVIDE( [#SparkAutoScale], [#OtherPAYG])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8b61dd62-4e7c-462a-9e9c-e37ebb691624
+
+		changedProperty = Name
+
+		changedProperty = FormatString
 
 	column DateKey
 		dataType: int64
@@ -17,6 +50,7 @@ table calendar
 
 	column Date
 		dataType: dateTime
+		isKey
 		formatString: Short Date
 		sourceProviderType: varchar(8000)
 		lineageTag: 3676d839-1ab8-4114-a905-6c9a318e2714
