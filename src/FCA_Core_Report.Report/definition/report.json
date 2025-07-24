@@ -1,0 +1,139 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/2.1.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU10",
+      "reportVersionAtImport": "5.59",
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU10",
+          "path": "BaseThemes/CY24SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "RI022388863377340917.png",
+          "path": "RI022388863377340917.png",
+          "type": "Image"
+        },
+        {
+          "name": "Process_Slide906851615743555.png",
+          "path": "Process_Slide906851615743555.png",
+          "type": "Image"
+        },
+        {
+          "name": "Bar_Chart5942263433557248.png",
+          "path": "Bar_Chart5942263433557248.png",
+          "type": "Image"
+        },
+        {
+          "name": "OneLake00872835112603998.png",
+          "path": "OneLake00872835112603998.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pie_Chart7432712791783839.png",
+          "path": "Pie_Chart7432712791783839.png",
+          "type": "Image"
+        },
+        {
+          "name": "Plus8062984968378967.png",
+          "path": "Plus8062984968378967.png",
+          "type": "Image"
+        },
+        {
+          "name": "X42742042593356455.png",
+          "path": "X42742042593356455.png",
+          "type": "Image"
+        },
+        {
+          "name": "Fabric_(1)23791821566875504.png",
+          "path": "Fabric_(1)23791821566875504.png",
+          "type": "Image"
+        },
+        {
+          "name": "Map_pin_(1)5535195239560516.png",
+          "path": "Map_pin_(1)5535195239560516.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pie_Chart8008170453050583.png",
+          "path": "Pie_Chart8008170453050583.png",
+          "type": "Image"
+        },
+        {
+          "name": "Home6039078505473.png",
+          "path": "Home6039078505473.png",
+          "type": "Image"
+        },
+        {
+          "name": "Summary8205718801895386.png",
+          "path": "Summary8205718801895386.png",
+          "type": "Image"
+        },
+        {
+          "name": "Capacity_Usage20113330825138886.png",
+          "path": "Capacity_Usage20113330825138886.png",
+          "type": "Image"
+        },
+        {
+          "name": "Cost_Details2693487581140406.png",
+          "path": "Cost_Details2693487581140406.png",
+          "type": "Image"
+        },
+        {
+          "name": "Support46825986147764254.png",
+          "path": "Support46825986147764254.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}
