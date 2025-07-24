@@ -1,6 +1,6 @@
 expression DatabaseQuery =
 		let
-		    database = Sql.Database("hgyg6fcw4dkuzgzwxda5y3vydi-wzp7ugxljgsuvfbq7ibvrvxvai.datawarehouse.fabric.microsoft.com", "8c863c81-e5d3-4c93-b79f-e7f83c70b754")
+		    database = Sql.Database("cq2vt3uarknerfaosllznbx3ci-dkhgeuwpo4zelp6arzbamebtce.datawarehouse.fabric.microsoft.com", "670785e5-1c1c-4b2f-88ca-7538af5e9a7a")
 		in
 		    database
 	lineageTag: 6f9c0e56-0423-41ca-962c-a4da53edf504
@@ -8,5 +8,4 @@ expression DatabaseQuery =
 	annotation PBI_IncludeFutureArtifacts = False
 
 	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[focus]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[focus_staging]"}},"objectType":"Table"}]
-
 

@@ -6,4 +6,3 @@ relationship c5137560-7461-4f58-3599-9a62c860ced0
 	fromColumn: fca.ChargePeriodStart_DateKey
 	toColumn: calendar.DateKey
 
-

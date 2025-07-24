@@ -101,6 +101,10 @@ table fca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Measure = 1
+		formatString: 0
+		lineageTag: f67fda57-be05-4829-b3a0-7534d8c7eaad
+
 	column BilledCost
 		dataType: double
 		sourceProviderType: decimal(38, 18)
@@ -745,5 +749,4 @@ table fca
 	changedProperty = Name
 
 	changedProperty = IsHidden
-
 

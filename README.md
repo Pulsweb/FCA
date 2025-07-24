@@ -60,7 +60,7 @@ Are you ready to try FCA? Let's follow these simple steps:
 
 To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)), an Azure Data Lake Storage Gen2 will be required ([Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account)).
 
-ℹ️ FCA will retain only data related to fabric costs.
+ℹ️ FCA will retain only data related to Fabric costs.
 
 Once Data Lake Gen 2 storage account created here are the high levels steps to create an export:
 - Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**
@@ -89,11 +89,25 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 
 #### 1.2 - (Optional) Reservation Data
 
+ℹ️ Reservation Data are not already used within this first V1.0 release.
+
 To create reservation export, on the Azure portal , search for **Cost Management**
 - Select the required scope and select **Exports** in the left navigation menu
 - Select **+ Create**
-- On the Basics tab, select the template = **Reservation ???**
-- 
+- On the Basics tab, select the template = **All reservation data**
+- On the Datasets tab, fill in **Export prefix** with "fca"
+- On the Destination tab, select:
+  - Storage type = **Azure blob storage**
+  - Destination and storage = **Use existing**
+  - Subscription = Your subscription
+  - Storage account = Your storage account
+  - Container = **fca**
+  - Directory = **reservation**
+  - Format = **csv**
+  - Compression type = **none**
+  - Overwrite data = **Enabled**
+- On the Review + Create tab, select **Create**
+- Run the export by selecting **Run now** on the export page
 
 ### 2 - Configure Fabric items
 
@@ -139,7 +153,7 @@ Steps to create the Data Agent:
 - Open the **02_Create_DataAgent** Notebook
 - Click "Run All" in the Notebook
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifact *FCA_Agent* and open it to chat with your data
-
+- Enhance custom agents in Microsoft Copilot Studio by leveraging insights from FCA Fabric Data Agent, as demonstrated in following video: https://www.youtube.com/watch?v=GCtk2HPxZi8
 
 ### Support
 

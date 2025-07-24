@@ -6,7 +6,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.145.907.0 (25.07)+08cac3e9c99e1ac1a607ae58202057cfd59f320a
+annotation PBIDesktopVersion = 2.146.303.0 (25.08)+f0de80c4b4d26001de515b7705dc64bcef63235a
 
 annotation PBI_QueryOrder = ["DatabaseQuery"]
 
@@ -16,10 +16,11 @@ annotation TabularEditor_SerializeOptions = {"IgnoreInferredObjects":true,"Ignor
 
 annotation __TEdtr = 1
 
+annotation __PBI_ServiceStoredInTmdl = reserved
+
 ref table calendar
 ref table meters
 ref table fca
 
 ref cultureInfo en-US
-
 
