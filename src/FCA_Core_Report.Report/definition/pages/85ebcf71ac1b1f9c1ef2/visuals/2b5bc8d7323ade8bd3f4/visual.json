@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 540,
     "width": 340,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -780,20 +780,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "80915bb13b03478675f8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "meters"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   },

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "65f33a2167a86c136659",
   "position": {
-    "x": 715.75113808801211,
-    "y": 369.04400606980272,
-    "z": 6000,
-    "height": 327.28376327769342,
-    "width": 554.53717754172987,
-    "tabOrder": 6000
+    "x": 713.96200104584273,
+    "y": 64.805781633391874,
+    "z": 3000,
+    "height": 327.3241174025556,
+    "width": 553.59515158016109,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "stackedAreaChart",
@@ -20,14 +20,44 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fca"
+                      "Entity": "calendar"
                     }
                   },
-                  "Property": "ChargePeriodStart"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "Data.ChargePeriodStart.Variation.Date Hierarchy.Year",
-              "nativeQueryRef": "ChargePeriodStart Year",
+              "queryRef": "calendar.Year",
+              "nativeQueryRef": "Year",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calendar"
+                    }
+                  },
+                  "Property": "YearMonth"
+                }
+              },
+              "queryRef": "calendar.YearMonth",
+              "nativeQueryRef": "YearMonth",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "calendar"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "calendar.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -58,10 +88,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fca"
+                    "Entity": "calendar"
                   }
                 },
-                "Property": "ChargePeriodStart"
+                "Property": "Year"
               }
             },
             "direction": "Ascending"

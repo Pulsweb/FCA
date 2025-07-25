@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4b3294456e4676a9bfaa",
   "position": {
-    "x": 237,
-    "y": 68,
-    "z": 5000,
-    "height": 633,
-    "width": 466,
-    "tabOrder": 5000
+    "x": 237.25506496292621,
+    "y": 173.5476864080664,
+    "z": 2000,
+    "height": 527.23347769539157,
+    "width": 465.7229052975959,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
@@ -65,8 +65,8 @@
                 }
               },
               "queryRef": "Data.$ProvisionedCapacity",
-              "nativeQueryRef": "Provisioned Capacity",
-              "displayName": "Provisioned Capacity"
+              "nativeQueryRef": "Resource used",
+              "displayName": "Resource used"
             },
             {
               "field": {
@@ -80,8 +80,8 @@
                 }
               },
               "queryRef": "fca.#AvailableCapacity",
-              "nativeQueryRef": "Available Capacity",
-              "displayName": "Available Capacity"
+              "nativeQueryRef": "Resource available",
+              "displayName": "Resource available"
             }
           ]
         }
@@ -129,6 +129,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "40L"
+                }
+              }
             }
           }
         }
@@ -166,7 +173,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'Auto'"
                 }
               }
             },
@@ -181,6 +188,13 @@
               "expr": {
                 "Literal": {
                   "Value": "200D"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -203,6 +217,20 @@
           },
           "selector": {
             "metadata": "Data.$ProvisionedCapacity"
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fca.#AvailableCapacity"
           }
         }
       ],
@@ -315,7 +343,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3D7DEB'"
+                      "Value": "'#2AAA92'"
                     }
                   }
                 }
@@ -324,6 +352,56 @@
           },
           "selector": {
             "metadata": "Data.$ProvisionedCapacity"
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "57D"
+                }
+              }
+            },
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2AAA92'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2AAA92'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fca.#AvailableCapacity"
           }
         }
       ],
@@ -334,6 +412,46 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "seriesOrderReversed": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "seriesOrderSorted": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "stackedGapSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

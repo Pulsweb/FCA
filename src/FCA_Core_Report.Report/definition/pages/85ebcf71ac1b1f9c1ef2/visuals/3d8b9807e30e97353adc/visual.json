@@ -7,7 +7,7 @@
     "z": 11000,
     "height": 540,
     "width": 340,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -732,20 +732,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "d3ff5d493d6582f86ce6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "meters"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "a3f66d79abe13cf8b527",
         "field": {
