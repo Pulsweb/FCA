@@ -109,12 +109,16 @@ To create reservation export, on the Azure portal , search for **Cost Management
 - On the Review + Create tab, select **Create**
 - Run the export by selecting **Run now** on the export page
 
+ ℹ️ When performing the export, you have the option to retrieve one year of historical data.
+
 ### 2 - Configure Fabric items
 
 - Create a new workspace "FCA" (name can be changed), which is backed by a P or F-capacity
 - Download the ([Workspace logo](https://github.com/Pulsweb/FCA/blob/main/media/FCA%20Logo%20Small.png)) and add the logo to the workspace
-- Create a new Lakehouse "FCA" on the workspace ([Create a lakehouse in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse))
-- Create a new File Shortcut on the Lakehouse ([Create an Azure Data Lake Storage Gen2 shortcut](https://learn.microsoft.com/en-us/fabric/onelake/create-adls-shortcut))
+- Download and import the **[00_Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/00_Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
+- Click "Run All" in the Notebook
+- Navigate to your FCA Workspace and refresh the browser to view the newly created artifacts
+- Create a new File Shortcut on the FCA Lakehouse ([Create an Azure Data Lake Storage Gen2 shortcut](https://learn.microsoft.com/en-us/fabric/onelake/create-adls-shortcut))
   - Select the ellipsis (**...**) next to **Files**
   - Select **New shortcut**
   - Select Azure Data Lake Storage Gen 2 and provide the following settings:
@@ -136,9 +140,6 @@ To create reservation export, on the Azure portal , search for **Cost Management
 
 ### 3 - Run the Pipeline
 
-- Download and import the **[00_Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/00_Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
-- Click "Run All" in the Notebook
-- Navigate to your FCA Workspace and refresh the browser to view the newly created artifacts
 - Open the **Load FCA E2E** Data pipeline and Run the Pipeline once
 
 ℹ️ The pipeline can be scheduled for daily loads ([Scheduled data pipeline runs](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs#scheduled-data-pipeline-runs)).
