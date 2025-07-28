@@ -97,11 +97,6 @@
           "type": "Image"
         },
         {
-          "name": "Pie_Chart8008170453050583.png",
-          "path": "Pie_Chart8008170453050583.png",
-          "type": "Image"
-        },
-        {
           "name": "Home6039078505473.png",
           "path": "Home6039078505473.png",
           "type": "Image"
@@ -129,6 +124,16 @@
         {
           "name": "Report313701625449037.png",
           "path": "Report313701625449037.png",
+          "type": "Image"
+        },
+        {
+          "name": "Plus_circle8482395511276929.png",
+          "path": "Plus_circle8482395511276929.png",
+          "type": "Image"
+        },
+        {
+          "name": "Pause6616628101039818.png",
+          "path": "Pause6616628101039818.png",
           "type": "Image"
         }
       ]

@@ -69,14 +69,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "calendar"
+                      "Entity": "fca"
                     }
                   },
                   "Property": "Total Cost MTD"
                 }
               },
-              "queryRef": "calendar.Total Cost MTD",
-              "nativeQueryRef": "Total Cost MTD1"
+              "queryRef": "fca.Total Cost MTD",
+              "nativeQueryRef": "Total Cost MTD"
             }
           ]
         }

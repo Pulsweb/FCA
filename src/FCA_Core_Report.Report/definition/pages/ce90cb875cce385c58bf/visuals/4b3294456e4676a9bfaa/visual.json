@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4b3294456e4676a9bfaa",
   "position": {
-    "x": 237.25506496292621,
-    "y": 173.5476864080664,
+    "x": 237.05446929607189,
+    "y": 234.43508289501034,
     "z": 2000,
-    "height": 527.23347769539157,
-    "width": 465.7229052975959,
+    "height": 436.12783577675106,
+    "width": 466.25077938895907,
     "tabOrder": 2000
   },
   "visual": {
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Data.ResourceName",
-              "nativeQueryRef": "ResourceName",
-              "active": true
+              "nativeQueryRef": "Capacity",
+              "active": true,
+              "displayName": "Capacity"
             }
           ]
         },
@@ -61,12 +62,12 @@
                       "Entity": "fca"
                     }
                   },
-                  "Property": "#ProvisionedCapacity"
+                  "Property": "#UsedCapacity"
                 }
               },
-              "queryRef": "Data.$ProvisionedCapacity",
-              "nativeQueryRef": "Resource used",
-              "displayName": "Resource used"
+              "queryRef": "fca.#UsedCapacity",
+              "nativeQueryRef": "Capacity Used",
+              "displayName": "Capacity Used"
             },
             {
               "field": {
@@ -80,8 +81,8 @@
                 }
               },
               "queryRef": "fca.#AvailableCapacity",
-              "nativeQueryRef": "Resource available",
-              "displayName": "Resource available"
+              "nativeQueryRef": "Capacity Available",
+              "displayName": "Capacity Available"
             }
           ]
         }
@@ -96,7 +97,7 @@
                     "Entity": "fca"
                   }
                 },
-                "Property": "#ProvisionedCapacity"
+                "Property": "#UsedCapacity"
               }
             },
             "direction": "Descending"
@@ -202,29 +203,28 @@
         },
         {
           "properties": {
-            "detailColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Data.$ProvisionedCapacity"
-          }
-        },
-        {
-          "properties": {
             "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2AAA92'"
+                    }
+                  }
+                }
+              }
+            },
+            "detailBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -338,28 +338,10 @@
         },
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#2AAA92'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Data.$ProvisionedCapacity"
-          }
-        },
-        {
-          "properties": {
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "57D"
+                  "Value": "80D"
                 }
               }
             },
@@ -402,6 +384,24 @@
           },
           "selector": {
             "metadata": "fca.#AvailableCapacity"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2AAA92'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fca.#UsedCapacity"
           }
         }
       ],

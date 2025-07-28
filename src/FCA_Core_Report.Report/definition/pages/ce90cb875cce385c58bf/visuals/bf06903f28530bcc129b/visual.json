@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "bf06903f28530bcc129b",
   "position": {
-    "x": 713.96200104584273,
-    "y": 392.12989903594746,
+    "x": 726.87972629458511,
+    "y": 234.43508289501034,
     "z": 4000,
-    "height": 291.0768158109974,
-    "width": 553.59515158016109,
+    "height": 438.7472221778126,
+    "width": 529.11605301443672,
     "tabOrder": 4000
   },
   "visual": {
@@ -27,9 +27,9 @@
                 }
               },
               "queryRef": "meters.Name",
-              "nativeQueryRef": "Usage",
+              "nativeQueryRef": "Capacity Usage",
               "active": true,
-              "displayName": "Usage"
+              "displayName": "Capacity Usage"
             }
           ]
         },
@@ -37,58 +37,21 @@
           "projections": [
             {
               "field": {
-                "Arithmetic": {
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fca"
-                        }
-                      },
-                      "Property": "#ProvisionedCapacity"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fca"
                     }
                   },
-                  "Right": {
-                    "ScopedEval": {
-                      "Expression": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "fca"
-                            }
-                          },
-                          "Property": "#ProvisionedCapacity"
-                        }
-                      },
-                      "Scope": []
-                    }
-                  },
-                  "Operator": 3
+                  "Property": "#UsedCapacity"
                 }
               },
-              "queryRef": "Divide(fca.$ProvisionedCapacity, ScopedEval(fca.$ProvisionedCapacity, []))",
-              "nativeQueryRef": "%GT Provisioned Capacity",
-              "displayName": "%GT Provisioned Capacity"
+              "queryRef": "fca.#UsedCapacity",
+              "nativeQueryRef": "Capacity Used Cost",
+              "displayName": "Capacity Used Cost"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "meters"
-                  }
-                },
-                "Property": "Name"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -112,13 +75,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "349D"
+                  "Value": "326.6909714168644D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "meters.Name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.62646296166514D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fca.#UsedCapacity"
           }
         }
       ],
@@ -215,6 +192,31 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cost of what have been used'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2AAA92'"
+                    }
+                  }
                 }
               }
             }
@@ -345,21 +347,6 @@
         }
       },
       {
-        "name": "7e2639544e8dae2f9738",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fca"
-              }
-            },
-            "Property": "#ProvisionedCapacity"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
         "name": "c6915091eccb7f47ba82",
         "field": {
           "Arithmetic": {
@@ -445,7 +432,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }
