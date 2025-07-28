@@ -106,3 +106,5 @@ table meters
 			schemaName: dbo
 			expressionSource: DatabaseQuery
 
+	annotation PBI_ResultType = Table
+

@@ -914,3 +914,5 @@ table fca
 
 	changedProperty = IsHidden
 
+	annotation PBI_ResultType = Table
+
