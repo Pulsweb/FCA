@@ -59,6 +59,23 @@
         }
       },
       {
+        "name": "FCA Version",
+        "type": "TridentNotebook",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.1:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "8bb5aa79-071e-4c9e-b73c-ea6a8d618bcd",
+          "workspaceId": "1afa5fb6-49eb-4aa5-9430-fa0358d6f502",
+          "sessionTag": "fca"
+        }
+      },
+      {
         "name": "Load Meters",
         "type": "TridentNotebook",
         "dependsOn": [],
