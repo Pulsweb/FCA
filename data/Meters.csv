@@ -80,5 +80,5 @@ SQL database in Microsoft Fabric Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
 SQL Storage Data Stored,,GA,FALSE,FALSE,OneLake
 Storage Mirroring Data Stored,,GA,FALSE,FALSE,OneLake
 Storage Mirroring Free Data Stored,,GA,FALSE,FALSE,OneLake
-user data functions Capacity Usage CU,,GA,FALSE,FALSE,OneLake
-VNet Data Gateway Capacity Usage CU,,GA,FALSE,FALSE,OneLake
+user data functions Capacity Usage CU,,GA,FALSE,TRUE,OneLake
+VNet Data Gateway Capacity Usage CU,,GA,FALSE,TRUE,OneLake
