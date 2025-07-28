@@ -118,6 +118,9 @@ To create reservation export, on the Azure portal , search for **Cost Management
 - Download and import the **[00_Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/00_Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
 - Click "Run All" in the Notebook
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifacts
+
+![FCA](./media/Setup-Export6.png)
+
 - Create a new File Shortcut on the FCA Lakehouse ([Create an Azure Data Lake Storage Gen2 shortcut](https://learn.microsoft.com/en-us/fabric/onelake/create-adls-shortcut))
   - Select the ellipsis (**...**) next to **Files**
   - Select **New shortcut**
