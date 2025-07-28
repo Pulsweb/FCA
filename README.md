@@ -117,6 +117,9 @@ To create reservation export, on the Azure portal , search for **Cost Management
 - Download the ([Workspace logo](https://github.com/Pulsweb/FCA/blob/main/media/FCA%20Logo%20Small.png)) and add the logo to the workspace
 - Download and import the **[00_Deploy_FCA.ipynb](https://github.com/Pulsweb/FCA/blob/main/script/00_Deploy_FCA.ipynb)** Notebook into your FCA workspace ([Import existing notebooks](https://learn.microsoft.com/en-us/fabric/data-engineering/how-to-use-notebook#import-existing-notebooks))
 - Click "Run All" in the Notebook
+
+![FCA](./media/Setup-Export7.png)
+
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifacts
 
 ![FCA](./media/Setup-Export6.png)
