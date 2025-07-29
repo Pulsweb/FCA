@@ -50,7 +50,11 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 #### Data Agent
 
+With a Data Agent on top of the FCA semantic model you can query in natural language Fabric Cost. 
 
+The following provides an example of communication in both English and French.
+
+![FCA Data Agent](./media/FCA_Agent.png)
 
 ## Setup
 
@@ -154,9 +158,7 @@ To create reservation export, on the Azure portal , search for **Cost Management
 
 ### 4 - (Optional) Create the Data Agent
 
-With a Data Agent on top of the FCA you can query in natural language Fabric Cost.
-
-Since it's required additional prerequisites, we made it optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
+Since it's required additional prerequisites, the creation of the Data Agent is optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
 
 Steps to create the Data Agent:
 - Open the **02_Create_DataAgent** Notebook
