@@ -78,7 +78,7 @@ SQL Backup Storage Data Stored,,GA,FALSE,FALSE,SQL
 SQL database in Microsoft Fabric,Represents SQL database in Microsoft Fabric on your capacity,GA,FALSE,TRUE,SQL
 SQL database in Microsoft Fabric Capacity Usage CU,,GA,FALSE,TRUE,SQL
 SQL Storage Data Stored,,GA,FALSE,FALSE,SQL
-Storage Mirroring Data Stored,,GA,FALSE,FALSE,OneLake
-Storage Mirroring Free Data Stored,,GA,FALSE,FALSE,OneLake
+Storage Mirroring Data Stored,,GA,FALSE,FALSE,Mirroring
+Storage Mirroring Free Data Stored,,GA,FALSE,FALSE,Mirroring
 user data functions Capacity Usage CU,,GA,FALSE,TRUE,UDF
 VNet Data Gateway Capacity Usage CU,,GA,FALSE,TRUE,VNET
