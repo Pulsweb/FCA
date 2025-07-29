@@ -39,14 +39,14 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 #### Report
 
-| **#** | **Page** | **Info**                                                     |
-| ----- | -------- | ------------------------------------------------------------ |
-| **1** |          | Home Page  - Cost overview  - Cost per category  - Warnings  |
-| **2** |          | Summary Page  - Capacities number  - Region number  - Cost per category / capacity |
-| **3** |          | Usage Page  - Detail meters / capacity  - Usage info in regards of the ‘Compute  Pool Capacity Usage CU’ meter |
-| **4** |          | Detail Page  - Detail cost per capacities  - Cost per category / capacity / dates |
-| **5** |          | Reservation Page  - Reservation rate  - Capacities usage of the RI |
-| **6** |          | Support Page  - Architecture  - Learnings  - Links           |
+| **Page Name**      | **Information** | **Info**                                                     |
+| ------------------ | --------------- | ------------------------------------------------------------ |
+| **Home**           | Cost overview   | Savings Benefits example:<br /><br />Impact on the Pause example: <br /><br />A pause event will all go to PayGo as a reconciliation event, regardless of the customer using RI |
+| **Summary**        |                 | Summary Page  - Capacities number  - Region number  - Cost per category / capacity |
+| **Capacity Usage** |                 | Usage Page  - Detail meters / capacity  - Usage info in regards of the ‘Compute  Pool Capacity Usage CU’ meter |
+| **Reservation**    |                 | Detail Page  - Detail cost per capacities  - Cost per category / capacity / dates |
+| **Cost Detail**    |                 | Reservation Page  - Reservation rate  - Capacities usage of the RI |
+| **Support**        |                 | Support Page  - Architecture  - Learnings  - Links           |
 
 #### Data Agent
 
@@ -54,7 +54,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 ## Setup
 
-Are you ready to try FCA? Let's follow these simple steps:
+🏃‍♂️‍➡️ Are you ready to try FCA? Let's follow these simple steps:
 
 ### 1 - Configure export 
 

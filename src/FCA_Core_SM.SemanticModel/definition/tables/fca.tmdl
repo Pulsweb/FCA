@@ -249,7 +249,7 @@ table fca
 
 		changedProperty = Description
 
-	measure #SparkAutoScale = CALCULATE(SUM(fca[EffectiveCost]), meters[Name]= "autoscale for Spark Capacity Usage CU")
+	measure #SparkAutoScale = CALCULATE(SUM(fca[EffectiveCost]), meters[Name]= "autoscale for Spark Capacity Usage CU")+0
 		lineageTag: cb1772af-2ede-49b1-a23d-b67ac9320a09
 
 		formatStringDefinition =
