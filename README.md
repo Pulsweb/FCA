@@ -176,6 +176,4 @@ Important: Support tickets should not be opened for issues related to these temp
 
 ### Other helpful resources
 
-- Recorded Demo
-- [Microsoft FinOps toolkit](https://learn.microsoft.com/en-us/cloud-computing/finops/toolkit/power-bi/help-me-choose#comparison-table)
-- …
+- ...
