@@ -2,6 +2,7 @@ table meters
 	lineageTag: 3909217c-6b73-4264-8783-a8f4cfcf884b
 	sourceLineageTag: [dbo].[meters]
 
+	/// Meter Name
 	column Name
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -10,8 +11,11 @@ table meters
 		summarizeBy: none
 		sourceColumn: Name
 
+		changedProperty = Description
+
 		annotation SummarizationSetBy = Automatic
 
+	/// Meter Description
 	column Description
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -20,8 +24,11 @@ table meters
 		summarizeBy: none
 		sourceColumn: Description
 
+		changedProperty = Description
+
 		annotation SummarizationSetBy = Automatic
 
+	/// Meter State
 	column State
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -29,6 +36,8 @@ table meters
 		sourceLineageTag: State
 		summarizeBy: none
 		sourceColumn: State
+
+		changedProperty = Description
 
 		annotation SummarizationSetBy = Automatic
 
@@ -58,6 +67,7 @@ table meters
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Meter Category
 	column Category
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -66,26 +76,34 @@ table meters
 		summarizeBy: none
 		sourceColumn: Category
 
+		changedProperty = Description
+
 		annotation SummarizationSetBy = Automatic
 
 	column Name_Lower
 		dataType: string
+		isHidden
 		sourceProviderType: varchar(8000)
 		lineageTag: 9cf4ada9-a68a-4428-9e8c-eb60d30e0a05
 		sourceLineageTag: Name_Lower
 		summarizeBy: none
 		sourceColumn: Name_Lower
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column MeterKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: int
 		lineageTag: cc07d11a-edbb-4326-b1bc-0d88a7cf07b3
 		sourceLineageTag: MeterKey
 		summarizeBy: none
 		sourceColumn: MeterKey
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

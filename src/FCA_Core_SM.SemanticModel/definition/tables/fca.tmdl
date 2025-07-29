@@ -349,6 +349,7 @@ table fca
 
 	column BillingAccountId
 		dataType: string
+		isHidden
 		sourceProviderType: varchar(8000)
 		lineageTag: 07cbead3-bc3d-4ec7-afd7-b24dc40429d2
 		sourceLineageTag: BillingAccountId
@@ -556,7 +557,7 @@ table fca
 		annotation SummarizationSetBy = Automatic
 
 	column ConsumedQuantity
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: e6aed109-9129-4465-a22b-4b62ac72210e
 		sourceLineageTag: ConsumedQuantity
@@ -564,6 +565,8 @@ table fca
 		sourceColumn: ConsumedQuantity
 
 		changedProperty = IsHidden
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -582,7 +585,7 @@ table fca
 		annotation SummarizationSetBy = Automatic
 
 	column ContractedCost
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: 10a4f006-aa9b-48bb-a3c9-e17b43dcf4a0
 		sourceLineageTag: ContractedCost
@@ -591,12 +594,14 @@ table fca
 
 		changedProperty = IsHidden
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ContractedUnitPrice
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: c6a02873-f38b-4d49-b95d-1805dc5c2da6
 		sourceLineageTag: ContractedUnitPrice
@@ -605,12 +610,14 @@ table fca
 
 		changedProperty = IsHidden
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column EffectiveCost
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: f51a9e04-c97c-4098-9d1c-2f61881bfbcf
 		sourceLineageTag: EffectiveCost
@@ -618,6 +625,8 @@ table fca
 		sourceColumn: EffectiveCost
 
 		changedProperty = IsHidden
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -636,7 +645,7 @@ table fca
 		annotation SummarizationSetBy = Automatic
 
 	column ListCost
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: f27cf0dd-f864-4d6d-9a36-a5611b658a05
 		sourceLineageTag: ListCost
@@ -645,12 +654,14 @@ table fca
 
 		changedProperty = IsHidden
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column ListUnitPrice
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: 6b1ed701-e0fd-43be-8d21-77e5782832fc
 		sourceLineageTag: ListUnitPrice
@@ -658,6 +669,8 @@ table fca
 		sourceColumn: ListUnitPrice
 
 		changedProperty = IsHidden
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -676,7 +689,7 @@ table fca
 		annotation SummarizationSetBy = Automatic
 
 	column PricingQuantity
-		dataType: double
+		dataType: decimal
 		sourceProviderType: decimal(38, 18)
 		lineageTag: b4bf37f6-6953-4197-bafd-b193e2e59a94
 		sourceLineageTag: PricingQuantity
@@ -684,6 +697,8 @@ table fca
 		sourceColumn: PricingQuantity
 
 		changedProperty = IsHidden
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -919,6 +934,7 @@ table fca
 
 	column ChargePeriodStart_DateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: int
 		lineageTag: 40f3e12d-635a-41d5-a7fb-d9511204a253
@@ -932,6 +948,7 @@ table fca
 
 	column MeterKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: int
 		lineageTag: 50668fd0-6c95-4192-9f78-9195cff44526
@@ -944,13 +961,15 @@ table fca
 		annotation SummarizationSetBy = Automatic
 
 	column CommitmentSavings
-		dataType: double
+		dataType: decimal
 		lineageTag: ceab9491-1b54-4d01-9e01-fa485f945327
 		sourceLineageTag: CommitmentSavings
 		summarizeBy: sum
 		sourceColumn: CommitmentSavings
 
 		changedProperty = IsHidden
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 

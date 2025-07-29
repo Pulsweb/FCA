@@ -5,6 +5,7 @@ table calendar
 
 	column DateKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		sourceProviderType: int
 		lineageTag: 4c6bfbf2-07c5-4982-bb94-cf2d9d833f78

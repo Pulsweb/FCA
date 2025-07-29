@@ -2,6 +2,7 @@ table audit_latest_available_fca_version
 	lineageTag: 73ef1116-064e-4550-8c98-f45b50ca8628
 	sourceLineageTag: [dbo].[audit_latest_available_fca_version]
 
+	/// Indicates whether an FCA update is available by comparing the current FCA version with the latest available version.
 	measure 'FCA Update Available' = ```
 			
 						IF([FCA Release] == MAX(audit_latest_available_fca_version[current_fca_version]), 0, 1)
@@ -11,11 +12,17 @@ table audit_latest_available_fca_version
 
 		changedProperty = Name
 
+		changedProperty = Description
+
+	/// A static string value for FCA Release.
 	measure 'FCA Release' = "2025.7.28"
 		lineageTag: ba9a1bef-cb0e-42f4-8d14-ad6467ada7b7
 
 		changedProperty = Name
 
+		changedProperty = Description
+
+	/// Displays a string message based on whether the FCA Release is equal to the maximum current FCA version.
 	measure 'FCA Release Message' = ```
 			
 						IF(
@@ -28,6 +35,9 @@ table audit_latest_available_fca_version
 
 		changedProperty = Name
 
+		changedProperty = Description
+
+	/// Build Version
 	column build_version
 		dataType: int64
 		formatString: 0
@@ -37,8 +47,11 @@ table audit_latest_available_fca_version
 		summarizeBy: sum
 		sourceColumn: build_version
 
+		changedProperty = Description
+
 		annotation SummarizationSetBy = Automatic
 
+	/// Current FCA Version
 	column current_fca_version
 		dataType: string
 		sourceProviderType: varchar(8000)
@@ -46,6 +59,8 @@ table audit_latest_available_fca_version
 		sourceLineageTag: current_fca_version
 		summarizeBy: none
 		sourceColumn: current_fca_version
+
+		changedProperty = Description
 
 		annotation SummarizationSetBy = Automatic
 
