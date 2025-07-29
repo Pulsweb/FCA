@@ -31,9 +31,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -48,9 +48,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -65,9 +65,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -82,9 +82,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -99,9 +99,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -116,9 +116,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -133,9 +133,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -150,9 +150,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -167,9 +167,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -197,9 +197,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -212,9 +212,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -254,9 +254,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -270,9 +270,9 @@ table fca
 
 		formatStringDefinition =
 				SWITCH( MAX(fca[BillingCurrency]),
-				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
-				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
-				"\#,0.##;(\#,0.##);\#,0.##")
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -291,7 +291,11 @@ table fca
 	measure #CommitmentSavings = IF(SUM(fca[CommitmentSavings]) > 1, SUM(fca[CommitmentSavings]), 0)
 		lineageTag: 501f93a1-3a46-434a-afbc-80eee5ba509e
 
-		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
+		formatStringDefinition =
+				SWITCH( MAX(fca[BillingCurrency]),
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -302,7 +306,11 @@ table fca
 	measure #BCDRCost = CALCULATE(SUM(fca[EffectiveCost]),SEARCH("BCDR",meters[Name],1,0))+0
 		lineageTag: dfbdc4c7-34ed-421a-83c4-232a543380f1
 
-		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
+		formatStringDefinition =
+				SWITCH( MAX(fca[BillingCurrency]),
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
@@ -313,7 +321,11 @@ table fca
 	measure #Mirroring = CALCULATE(SUM(fca[EffectiveCost]),fca[ChargeCategory]="Mirroring")+0
 		lineageTag: cd489ad5-a884-48bb-90a5-8982fd759758
 
-		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
+		formatStringDefinition =
+				SWITCH( MAX(fca[BillingCurrency]),
+				"USD", "\$#,0.00;(\$#,0.00);\$#,0.00",
+				"EUR", "\€#,0.00;(\€#,0.00);\€#,0.00",
+				"#,0.00;(#,0.00);#,0.00")
 
 		changedProperty = Name
 
