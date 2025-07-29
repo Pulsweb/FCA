@@ -89,22 +89,10 @@ table meters
 
 		annotation SummarizationSetBy = Automatic
 
-	column Inluded
-		dataType: string
-		sourceProviderType: varchar(8000)
-		lineageTag: ccf8b2c9-0e06-4e8f-9e69-9a7933dc8965
-		sourceLineageTag: Inluded
-		summarizeBy: none
-		sourceColumn: Inluded
-
-		annotation SummarizationSetBy = Automatic
-
 	partition meters = entity
 		mode: directLake
 		source
 			entityName: meters
 			schemaName: dbo
 			expressionSource: DatabaseQuery
-
-	annotation PBI_ResultType = Table
 

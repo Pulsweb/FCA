@@ -109,7 +109,7 @@ To create reservation export, on the Azure portal , search for **Cost Management
 - On the Review + Create tab, select **Create**
 - Run the export by selecting **Run now** on the export page
 
- ℹ️ When performing the export, you have the option to retrieve one year of historical data.
+ ℹ️ When performing the export, you have the option to retrieve one year of historical data in one-month chunks.
 
 ### 2 - Configure Fabric items
 

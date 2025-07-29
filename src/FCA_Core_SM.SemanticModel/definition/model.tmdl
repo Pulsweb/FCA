@@ -6,11 +6,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.146.7734.7 (Main)+d9b2b28c0d3e4400396ffa51394058e38eedec7e
+annotation PBIDesktopVersion = 2.146.430.0 (25.08)+251af4dfd89113669482f3557257e2a02411c05b
 
 annotation PBI_QueryOrder = ["DatabaseQuery"]
 
-annotation PBI_ProTooling = ["RemoteModeling","WebModelingEdit","DevMode"]
+annotation PBI_ProTooling = ["RemoteModeling","WebModelingEdit","DevMode","Copilot","CopilotMeasureDescriptions"]
 
 annotation TabularEditor_SerializeOptions = {"IgnoreInferredObjects":true,"IgnoreInferredProperties":true,"IgnoreTimestamps":true,"SplitMultilineStrings":true,"PrefixFilenames":false,"LocalTranslations":false,"LocalPerspectives":false,"LocalRelationships":false,"Levels":["Data Sources","Perspectives","Relationships","Roles","Shared Expressions","Tables","Tables/Calculation Items","Tables/Columns","Tables/Hierarchies","Tables/Measures","Tables/Partitions","Translations"],"AlsoSaveAsBim":true}
 

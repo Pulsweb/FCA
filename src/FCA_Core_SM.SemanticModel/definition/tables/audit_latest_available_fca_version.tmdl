@@ -89,5 +89,3 @@ table audit_latest_available_fca_version
 			schemaName: dbo
 			expressionSource: DatabaseQuery
 
-	annotation PBI_ResultType = Table
-

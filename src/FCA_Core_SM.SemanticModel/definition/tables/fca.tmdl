@@ -2,6 +2,8 @@ table fca
 	lineageTag: 31521cc0-d265-4575-8480-9e7f2c780945
 	sourceLineageTag: [dbo].[focus_fabric]
 
+	/// Counts the distinct number of capacity
+	/// 
 	measure #Capacities = DISTINCTCOUNT(fca[ResourceName])
 		formatString: 0
 		lineageTag: 1c73cf80-e14d-46e9-adb5-007d9f3e7463
@@ -13,6 +15,8 @@ table fca
 		changedProperty = FormatString
 
 		changedProperty = FormatStringDefinition
+
+		changedProperty = Description
 
 	measure #Regions = DISTINCTCOUNT(fca[RegionName])
 		formatString: 0
@@ -175,6 +179,7 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+	/// Calculates the ratio of used capacity to provisioned capacity.
 	measure #UsageRatioCapacity = Divide([#UsedCapacity],[#ProvisionedCapacity])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 87bdfc32-0142-4217-94ff-6c0ee7738be6
@@ -184,6 +189,8 @@ table fca
 		changedProperty = IsHidden
 
 		changedProperty = FormatString
+
+		changedProperty = Description
 
 	measure 'Total Cost MTD' = TOTALMTD( [#TotalCost], 'calendar'[Date])
 		lineageTag: c7b6001e-1623-4dd5-86ec-5b92fc8b08b4
@@ -231,6 +238,7 @@ table fca
 
 		changedProperty = FormatString
 
+	/// Calculates the percentage of Pause Cost relative to Capacity PAYG.
 	measure 'PauseCost %' = DIVIDE( [#PauseCost], [#CapacityPAYG])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3c913747-fa14-4861-bb53-f72504573826
@@ -238,6 +246,8 @@ table fca
 		changedProperty = Name
 
 		changedProperty = FormatString
+
+		changedProperty = Description
 
 	measure #SparkAutoScale = CALCULATE([#OtherPAYG], meters[Name]= "autoscale for Spark Capacity Usage CU")
 		lineageTag: cb1772af-2ede-49b1-a23d-b67ac9320a09
@@ -254,6 +264,7 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+	/// Calculates the used capacity by subtracting the available capacity from the provisioned capacity.
 	measure #UsedCapacity = [#ProvisionedCapacity] - [#AvailableCapacity]
 		lineageTag: 82eb1070-e49a-411b-a020-d3fa1e82ac2f
 
@@ -262,6 +273,36 @@ table fca
 				"USD", "\$#,0.##;(\$#,0.##);\$#,0.##",
 				"EURO", "\€#,0.##;(\€#,0.##);\€#,0.##",
 				"\#,0.##;(\#,0.##);\#,0.##")
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = FormatStringDefinition
+
+		changedProperty = Description
+
+	measure #FCACountRows = COUNTROWS(fca)
+		formatString: 0
+		lineageTag: 760209bc-7b4e-46cf-83c7-744a473c1ee3
+
+		changedProperty = Name
+
+	measure #CommitmentSavings = IF(SUM(fca[CommitmentSavings]) > 1, SUM(fca[CommitmentSavings]), 0)
+		lineageTag: 501f93a1-3a46-434a-afbc-80eee5ba509e
+
+		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = FormatStringDefinition
+
+	measure #BCDRCost = CALCULATE(SUM(fca[EffectiveCost]),SEARCH("BCDR",meters[Name],1,0))+0
+		lineageTag: dfbdc4c7-34ed-421a-83c4-232a543380f1
+
+		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
 
 		changedProperty = Name
 
@@ -913,6 +954,4 @@ table fca
 	changedProperty = Name
 
 	changedProperty = IsHidden
-
-	annotation PBI_ResultType = Table
 

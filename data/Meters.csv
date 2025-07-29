@@ -7,7 +7,7 @@ API for GraphQL Query,Represents GraphQL Query API for your capacity,GA,FALSE,TR
 API for GraphQL Query Capacity Usage CU,,GA,FALSE,TRUE,Fabric CU
 Autoscale for Spark,Represents autoscale for Spark on your capacity,GA,FALSE,TRUE,Fabric CU
 autoscale for Spark Capacity Usage CU,,Preview,FALSE,FALSE,Fabric CU
-BCDR Storage Data Stored,,GA,FALSE,FALSE,Fabric CU
+BCDR Storage Data Stored,,GA,FALSE,TRUE,Fabric CU
 Compute Pool Capacity Usage CU,Represents the available capacity,GA,TRUE,TRUE,Fabric CU
 Copilot and AI,Represents Copilot and AI on your capacity,GA,FALSE,TRUE,Fabric CU
 Copilot and AI Capacity Usage CU,Represents Copilot and AI on your capacity,GA,FALSE,TRUE,Fabric CU
