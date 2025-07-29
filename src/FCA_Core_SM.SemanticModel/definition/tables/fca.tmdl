@@ -43,7 +43,7 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
-	measure #CapacityPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE(),fca[CommitmentDiscountType]<>"Reservation")+0
+	measure #CapacityPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE(),fca[CommitmentDiscountType]<>"Reservation")-[#PauseCost]+0
 		lineageTag: e739fabf-5c72-4db9-9c58-c0c8e018373a
 
 		formatStringDefinition =
@@ -77,7 +77,7 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
-	measure #OneLake = CALCULATE(SUM(fca[EffectiveCost]),meters[Category]="OneLake")
+	measure #OneLake = CALCULATE(SUM(fca[EffectiveCost]),meters[Category]="OneLake",meters[Included]=FALSE())
 		lineageTag: 7e8285be-14f6-4663-9d49-f5183b8ca80d
 
 		formatStringDefinition =
@@ -94,7 +94,7 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
-	measure #OtherPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=FALSE(), meters[Category]="Fabric CU")+0
+	measure #OtherPAYG = [#PauseCost]+[#SparkAutoScale]
 		lineageTag: c190a166-984d-4729-a7dc-f4de903108ad
 
 		formatStringDefinition =
@@ -249,7 +249,7 @@ table fca
 
 		changedProperty = Description
 
-	measure #SparkAutoScale = CALCULATE([#OtherPAYG], meters[Name]= "autoscale for Spark Capacity Usage CU")
+	measure #SparkAutoScale = CALCULATE(SUM(fca[EffectiveCost]), meters[Name]= "autoscale for Spark Capacity Usage CU")
 		lineageTag: cb1772af-2ede-49b1-a23d-b67ac9320a09
 
 		formatStringDefinition =
@@ -301,6 +301,17 @@ table fca
 
 	measure #BCDRCost = CALCULATE(SUM(fca[EffectiveCost]),SEARCH("BCDR",meters[Name],1,0))+0
 		lineageTag: dfbdc4c7-34ed-421a-83c4-232a543380f1
+
+		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
+
+		changedProperty = Name
+
+		changedProperty = FormatString
+
+		changedProperty = FormatStringDefinition
+
+	measure #Mirroring = CALCULATE(SUM(fca[EffectiveCost]),fca[ChargeCategory]="Mirroring")+0
+		lineageTag: cd489ad5-a884-48bb-90a5-8982fd759758
 
 		formatStringDefinition = SWITCH( MAX(fca[BillingCurrency]),"USD", "\$#,0.##;(\$#,0.##);\$#,0.##","EURO", "\€#,0.##;(\€#,0.##);\€#,0.##","\#,0.##;(\#,0.##);\#,0.##")
 
