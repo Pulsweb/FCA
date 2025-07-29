@@ -33,7 +33,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 - FCA extracts enriched Microsoft Learn documentation data
 - (optional) FCA extracts Azure Reservations details
 
-ℹ️ Azure Cost export is available for various Azure account types, including Enterprise Agreement (EA) and Microsoft Customer Agreement (MCA) customers. To view the full list of supported account types, see [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data). The Reader Azure permissions is sufficient to exports cost based on the scope, see [Understand and work with scopes](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes).
+ℹ️ Azure Cost export is available for various Azure account types, including Enterprise Agreement (EA) and Microsoft Customer Agreement (MCA) customers. To view the full list of supported account types, see [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data). 
 
 ### FCA Outputs
 
@@ -60,7 +60,7 @@ Are you ready to try FCA? Let's follow these simple steps:
 
 #### 1.1 - FOCUS Data
 
-Data export is available for various Azure account types, including Enterprise Agreement (EA) and Microsoft Customer Agreement (MCA) customers. To view the full list of supported account types, see [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data). To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)), the [Cost Management Contributor role](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes#roles-used-in-cost-management-on-rbac-scopes) will be required and an Azure Data Lake Storage Gen2 will be required to save the exported data ([Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account)).
+To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)), the [Cost Management Contributor role](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes#roles-used-in-cost-management-on-rbac-scopes) will be required and an Azure Data Lake Storage Gen2 will be required to save the exported data ([Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account)).
 
 ℹ️ FCA will retain only data related to Fabric costs.
 
