@@ -5,7 +5,7 @@ Apache Airflow job,Represents Apache Airflow on your capacity,GA,FALSE,TRUE,Apac
 Apache Airflow job Capacity Usage CU,,GA,FALSE,TRUE,Apache Airflow
 API for GraphQL Query,Represents GraphQL Query API for your capacity,GA,FALSE,TRUE,GraphQL
 API for GraphQL Query Capacity Usage CU,,GA,FALSE,TRUE,GraphQL
-Autoscale for Spark,Represents autoscale for Spark on your capacity,GA,FALSE,TRUE,Spark
+Autoscale for Spark,Represents autoscale for Spark on your capacity,GA,FALSE,FALSE,Spark
 autoscale for Spark Capacity Usage CU,,Preview,FALSE,FALSE,Spark
 BCDR Storage Data Stored,,GA,FALSE,TRUE,OneLake
 Compute Pool Capacity Usage CU,Represents the available capacity,GA,TRUE,TRUE,Fabric CU
@@ -51,7 +51,7 @@ OneLake BCDR Read Operations Capacity Usage CU,Represents the OneLake BCDR Read 
 OneLake BCDR Read Operations via API Capacity Usage CU,Represents the OneLake BCDR Read via Proxy & Shortcut Read via Proxy transaction compute usage on your capacity,GA,FALSE,TRUE,OneLake
 OneLake BCDR Write Operations Capacity Usage CU,Represents the OneLake BCDR Write via Redirect & Shortcut Write via Redirect transaction compute usage on your capacity,GA,FALSE,TRUE,OneLake
 OneLake BCDR Write Operations via proxy Capacity Usage CU,,GA,FALSE,TRUE,OneLake
-OneLake Cache Data Stored,,GA,FALSE,FALSE,OneLake
+OneLake Cache Data Stored,,GA,FALSE,TRUE,OneLake
 OneLake Iterative Read Operations Capacity Usage CU,Represents the OneLake Iterative Read via Redirect transaction compute usage on your capacity,GA,FALSE,TRUE,OneLake
 OneLake Iterative Read Operations via API Capacity Usage CU,Represents the OneLake Iterative Read via Proxy transaction compute usage on your capacity,GA,FALSE,TRUE,OneLake
 OneLake Iterative Read Operations via proxy Capacity Usage CU,,GA,FALSE,TRUE,OneLake
@@ -74,10 +74,10 @@ Real-Time Intelligence - Event Listener & Alert Capacity Usage CU,,GA,FALSE,TRUE
 Real-Time Intelligence - Event Operations,Represents Event Operations for Real-Time Intelligence on your capacity,GA,FALSE,TRUE,RTI
 Real-Time Intelligence - Event Operations Capacity Usage CU,,GA,FALSE,TRUE,RTI
 Spark Memory Optimized Capacity Usage CU,Represents the Spark usage on your capacity,GA,FALSE,TRUE,Spark
-SQL Backup Storage Data Stored,,GA,FALSE,FALSE,SQL
+SQL Backup Storage Data Stored,,GA,FALSE,TRUE,SQL
 SQL database in Microsoft Fabric,Represents SQL database in Microsoft Fabric on your capacity,GA,FALSE,TRUE,SQL
 SQL database in Microsoft Fabric Capacity Usage CU,,GA,FALSE,TRUE,SQL
-SQL Storage Data Stored,,GA,FALSE,FALSE,SQL
+SQL Storage Data Stored,,GA,FALSE,TRUE,SQL
 Storage Mirroring Data Stored,,GA,FALSE,FALSE,Mirroring
 Storage Mirroring Free Data Stored,,GA,FALSE,TRUE,Mirroring
 user data functions Capacity Usage CU,,GA,FALSE,TRUE,UDF
