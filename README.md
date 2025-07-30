@@ -45,7 +45,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 | **Summary** | Inform | The page provides an overview of cost per capacities across different regions, helping stakeholders to understand cost distributions and resource allocations within a specified timeframe | ![Summary Page](./media/Report_Summary.png) |
 | **Capacity Usage** | Optimize | The page is designed to enhance efficiency by illustrating how capacity is being utilized, enabling stakeholders to monitor and optimize resource allocation effectively | ![Capacity Usage Page](./media/Report_CapacityUsage.png) |
 | **Reservation** | Optimize | The page aims to reduce cloud waste by providing a comprehensive view of reservation-related data to verify the total usage of the reservation across the different capacities and a specified timeframe | ![Reservation Page](./media/Report_Reservation.png) |
-| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively | ![Cost Detail Page](./media/Report_CostDetail.png) |
+| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively | ![Cost Details Page](./media/Report_CostDetails.png) |
 | **Support** |                                                              | This page is designed to facilitate the learning and comprehension of the specific aspects of fabric costs and the contents of this report. | ![Support Page](./media/Report_Support.png) |
 
 #### Data Agent
