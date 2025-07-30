@@ -12,7 +12,7 @@ Customers may not always clearly distinguish between costs that are included or 
 
 Fabric Cost Analysis (short: FCA) is a solution to enable holistic monitoring of Microsoft Fabric Cost with the help of Microsoft Fabric.
 
-FSA has the goal to provide a holistic view specified on Microsoft Fabric aspects and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservations and particularity of the platform for a more finer data analysis. 
+FCA has the goal to provide a holistic view specified on Microsoft Fabric aspects and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservations and particularity of the platform for a more finer data analysis. 
 
 FCA is fully developed utilizing Fabric capabilities, with Pipelines and Notebooks serving as key tools for data extraction and transformation. Data is maintained both in its raw format and as Delta Parquet, allowing users to access it directly through Power BI Direct Lake. FCA includes standard reports that provide an overview of data and allow users to customize or create their own reports using the data model. Fabric's open framework enables integration with external data sources for further analysis as needed.
 
@@ -20,7 +20,7 @@ FCA is fully developed utilizing Fabric capabilities, with Pipelines and Noteboo
 
 ## Content
 
-🏗️ The solution is currently in a preview state.
+> 🏗️ The solution is currently in a Preview Version state and should not be widely shared publicly on the networks yet. We'll release it to everyone on a different GitHub repository by summer's end.
 
 ### Architecture
 
@@ -64,9 +64,11 @@ The following provides an example of communication in both English and French.
 
 #### 1.1 - FOCUS Data
 
-To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)), the [Cost Management Contributor role](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes#roles-used-in-cost-management-on-rbac-scopes) will be required and an Azure Data Lake Storage Gen2 will be required to save the exported data ([Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account)).
+ℹ️ FCA will retain only data related to Fabric costs, no other Azure cost will be kept. 
 
-ℹ️ FCA will retain only data related to Fabric costs.
+> To create an export (Create [Cost Management exports](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-improved-exports#create-exports)) the [Cost Management Contributor role](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-work-scopes#roles-used-in-cost-management-on-rbac-scopes) will be required.
+
+An Azure Data Lake Storage Gen2 is necessary for saving exported data, the following steps outline how to create a storage account: [Create a storage account](https://learn.microsoft.com/en-us/azure/storage/blobs/create-data-lake-storage-account).
 
 Once Data Lake Gen 2 storage account created here are the high levels steps to create an export:
 - Sign into the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**
@@ -95,7 +97,7 @@ Once Data Lake Gen 2 storage account created here are the high levels steps to c
 
 #### 1.2 - (Optional) Reservation Data
 
-ℹ️ Reservation Data are not already used within this first V1.0 release.
+ℹ️ Reservation Data are not already used within this first Preview Version release.
 
 To create reservation export, on the Azure portal , search for **Cost Management**
 - Select the required scope and select **Exports** in the left navigation menu
