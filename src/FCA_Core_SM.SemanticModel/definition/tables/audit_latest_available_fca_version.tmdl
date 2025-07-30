@@ -1,3 +1,4 @@
+/// FCA Version Table
 table audit_latest_available_fca_version
 	lineageTag: 73ef1116-064e-4550-8c98-f45b50ca8628
 	sourceLineageTag: [dbo].[audit_latest_available_fca_version]
@@ -15,7 +16,7 @@ table audit_latest_available_fca_version
 		changedProperty = Description
 
 	/// A static string value for FCA Release.
-	measure 'FCA Release' = "2025.7.28"
+	measure 'FCA Release' = "2025.7.30"
 		lineageTag: ba9a1bef-cb0e-42f4-8d14-ad6467ada7b7
 
 		changedProperty = Name
@@ -103,4 +104,6 @@ table audit_latest_available_fca_version
 			entityName: audit_latest_available_fca_version
 			schemaName: dbo
 			expressionSource: DatabaseQuery
+
+	changedProperty = Description
 

@@ -1,3 +1,4 @@
+/// Calandar Table
 table calendar
 	lineageTag: 70bb4cbc-9b0c-45fd-93de-64fd3fbe8408
 	sourceLineageTag: [dbo].[calendar]
@@ -204,4 +205,6 @@ table calendar
 			entityName: calendar
 			schemaName: dbo
 			expressionSource: DatabaseQuery
+
+	changedProperty = Description
 

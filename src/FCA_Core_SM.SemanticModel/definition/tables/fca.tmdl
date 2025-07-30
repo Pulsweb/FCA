@@ -1,3 +1,4 @@
+/// FCA Fact Table
 table fca
 	lineageTag: 31521cc0-d265-4575-8480-9e7f2c780945
 	sourceLineageTag: [dbo].[focus_fabric]
@@ -18,6 +19,7 @@ table fca
 
 		changedProperty = Description
 
+	/// Counts the distinct number of regions in the RegionName column of the FCA table
 	measure #Regions = DISTINCTCOUNT(fca[RegionName])
 		formatString: 0
 		lineageTag: 3c4e578e-5232-4564-95f0-9686647d2ef5
@@ -26,6 +28,9 @@ table fca
 
 		changedProperty = IsHidden
 
+		changedProperty = Description
+
+	/// Calculates the sum of EffectiveCost from the FCA table for meter representing the available capacity
 	measure #AvailableCapacity = CALCULATE(SUM(fca[EffectiveCost]), meters[Main]=TRUE())
 		lineageTag: 2c0d08ae-a7a5-43dd-a3c8-37ac4930c91d
 
@@ -43,6 +48,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of effective costs for included meters with a specific commitment discount type, adjusted by pause costs
 	measure #CapacityPAYG = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE(),fca[CommitmentDiscountType]<>"Reservation")-[#PauseCost]+0
 		lineageTag: e739fabf-5c72-4db9-9c58-c0c8e018373a
 
@@ -60,6 +68,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the total cost without RI by summing the commitment savings and the total cost
 	measure #CostWithoutRI = SUM(fca[CommitmentSavings]) + [#TotalCost]
 		lineageTag: 5e359efb-c7c6-4887-8f0c-797bedf82afe
 
@@ -77,6 +88,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of EffectiveCost from OneLake relative meters
 	measure #OneLake = CALCULATE(SUM(fca[EffectiveCost]),meters[Category]="OneLake",meters[Included]=FALSE())
 		lineageTag: 7e8285be-14f6-4663-9d49-f5183b8ca80d
 
@@ -94,6 +108,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of Pause Cost and Spark Auto Scale
 	measure #OtherPAYG = [#PauseCost]+[#SparkAutoScale]
 		lineageTag: c190a166-984d-4729-a7dc-f4de903108ad
 
@@ -111,6 +128,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of EffectiveCost for Capacity Pause deleting surcharge relative meters
 	measure #PauseCost = CALCULATE(SUM(fca[EffectiveCost]),fca[BillingType]="Capacity Pause/Delete Surcharge") + 0
 		lineageTag: d8b89ec9-27f2-4aca-8d6c-35787778d176
 
@@ -128,6 +148,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the total effective cost for provisioned capacity for meters included in capacity price
 	measure #ProvisionedCapacity = CALCULATE(SUM(fca[EffectiveCost]),meters[Included]=TRUE())
 		lineageTag: 9a310e2c-fece-473c-8872-a4ee11729d6f
 
@@ -145,6 +168,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of EffectiveCost relative to the RI
 	measure #Reservation = CALCULATE(SUM(fca[EffectiveCost]),fca[CommitmentDiscountType]="Reservation",meters[Included]=TRUE())+0
 		lineageTag: 25adad74-50b7-4a4e-bd58-741a65f35ba5
 
@@ -162,6 +188,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the total effective cost by summing the EffectiveCost column in the FCA table
 	measure #TotalCost = CALCULATE(SUM(fca[EffectiveCost]))
 		lineageTag: 526c4716-9009-4d64-bf6b-b35036b22651
 
@@ -179,7 +208,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
-	/// Calculates the ratio of used capacity to provisioned capacity.
+		changedProperty = Description
+
+	/// Calculates the ratio of used capacity to provisioned capacity
 	measure #UsageRatioCapacity = Divide([#UsedCapacity],[#ProvisionedCapacity])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 87bdfc32-0142-4217-94ff-6c0ee7738be6
@@ -192,6 +223,7 @@ table fca
 
 		changedProperty = Description
 
+	/// Calculates the total cost for the month to date
 	measure 'Total Cost MTD' = TOTALMTD( [#TotalCost], 'calendar'[Date])
 		lineageTag: c7b6001e-1623-4dd5-86ec-5b92fc8b08b4
 
@@ -207,6 +239,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the total cost from the beginning of the year to the current date
 	measure 'Total Cost YTD' = TOTALYTD( [#TotalCost], 'calendar'[Date])
 		lineageTag: 1d49cdb4-cee4-45a2-b0b1-46d592722ceb
 
@@ -222,6 +257,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the percentage of Spark AutoScale by dividing the number of Spark AutoScale instances by the number of Other PAYG instances
 	measure 'SparkAutoScale %' = DIVIDE( [#SparkAutoScale], [#OtherPAYG])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 8b61dd62-4e7c-462a-9e9c-e37ebb691624
@@ -230,6 +268,9 @@ table fca
 
 		changedProperty = FormatString
 
+		changedProperty = Description
+
+	/// Calculates the percentage of reservations by dividing the number of reservations by the total cost
 	measure 'Reservation %' = DIVIDE( [#Reservation], [#TotalCost])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 07901cd1-e387-457e-b861-0fcfa0901b47
@@ -238,7 +279,9 @@ table fca
 
 		changedProperty = FormatString
 
-	/// Calculates the percentage of Pause Cost relative to Capacity PAYG.
+		changedProperty = Description
+
+	/// Calculates the percentage of Pause Cost relative to Capacity PAYG
 	measure 'PauseCost %' = DIVIDE( [#PauseCost], [#CapacityPAYG])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3c913747-fa14-4861-bb53-f72504573826
@@ -249,6 +292,7 @@ table fca
 
 		changedProperty = Description
 
+	/// Calculates the sum of the EffectiveCost for Spark autoscale relative meters
 	measure #SparkAutoScale = CALCULATE(SUM(fca[EffectiveCost]), meters[Name]= "autoscale for Spark Capacity Usage CU")+0
 		lineageTag: cb1772af-2ede-49b1-a23d-b67ac9320a09
 
@@ -264,7 +308,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
-	/// Calculates the used capacity by subtracting the available capacity from the provisioned capacity.
+		changedProperty = Description
+
+	/// Calculates the used capacity by subtracting the available capacity from the provisioned capacity
 	measure #UsedCapacity = [#ProvisionedCapacity] - [#AvailableCapacity]
 		lineageTag: 82eb1070-e49a-411b-a020-d3fa1e82ac2f
 
@@ -282,12 +328,16 @@ table fca
 
 		changedProperty = Description
 
+	/// Counts the number of rows in the FCA table
 	measure #FCACountRows = COUNTROWS(fca)
 		formatString: 0
 		lineageTag: 760209bc-7b4e-46cf-83c7-744a473c1ee3
 
 		changedProperty = Name
 
+		changedProperty = Description
+
+	/// Calculates the total commitment savings if the sum of commitment savings is greater than 1; otherwise, returns 0
 	measure #CommitmentSavings = IF(SUM(fca[CommitmentSavings]) > 1, SUM(fca[CommitmentSavings]), 0)
 		lineageTag: 501f93a1-3a46-434a-afbc-80eee5ba509e
 
@@ -303,6 +353,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the total effective costs from the FCA table for BCDR relative meters
 	measure #BCDRCost = CALCULATE(SUM(fca[EffectiveCost]),SEARCH("BCDR",meters[Name],1,0))+0
 		lineageTag: dfbdc4c7-34ed-421a-83c4-232a543380f1
 
@@ -318,6 +371,9 @@ table fca
 
 		changedProperty = FormatStringDefinition
 
+		changedProperty = Description
+
+	/// Calculates the sum of EffectiveCost for Mirroring relative meters
 	measure #Mirroring = CALCULATE(SUM(fca[EffectiveCost]),fca[ChargeCategory]="Mirroring")+0
 		lineageTag: cd489ad5-a884-48bb-90a5-8982fd759758
 
@@ -332,6 +388,8 @@ table fca
 		changedProperty = FormatString
 
 		changedProperty = FormatStringDefinition
+
+		changedProperty = Description
 
 	column BilledCost
 		dataType: double
@@ -996,4 +1054,6 @@ table fca
 	changedProperty = Name
 
 	changedProperty = IsHidden
+
+	changedProperty = Description
 

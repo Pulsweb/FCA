@@ -1,3 +1,4 @@
+/// Meter table
 table meters
 	lineageTag: 3909217c-6b73-4264-8783-a8f4cfcf884b
 	sourceLineageTag: [dbo].[meters]
@@ -41,6 +42,7 @@ table meters
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Meter = "Compute Pool Capacity Usage CU" Representing the available capacity
 	column Main
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
@@ -52,8 +54,11 @@ table meters
 
 		changedProperty = DataType
 
+		changedProperty = Description
+
 		annotation SummarizationSetBy = Automatic
 
+	/// Meter included or not in the SKU
 	column Included
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
@@ -64,6 +69,8 @@ table meters
 		sourceColumn: Included
 
 		changedProperty = DataType
+
+		changedProperty = Description
 
 		annotation SummarizationSetBy = Automatic
 
@@ -113,4 +120,6 @@ table meters
 			entityName: meters
 			schemaName: dbo
 			expressionSource: DatabaseQuery
+
+	changedProperty = Description
 
