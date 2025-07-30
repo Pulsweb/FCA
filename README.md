@@ -14,13 +14,13 @@ Fabric Cost Analysis (short: FCA) is a solution to enable holistic monitoring of
 
 FCA has the goal to provide a holistic view specified on Microsoft Fabric aspects and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservations and particularity of the platform for a more finer data analysis. 
 
-FCA is fully developed utilizing Fabric capabilities, with Pipelines and Notebooks serving as key tools for data extraction and transformation. Data is maintained both in its raw format and as Delta Parquet, allowing users to access it directly through Power BI Direct Lake. FCA includes standard reports that provide an overview of data and allow users to customize or create their own reports using the data model. Fabric's open framework enables integration with external data sources for further analysis as needed.
+FCA is fully developed utilizing Fabric capabilities, with Pipelines and Notebooks serving as key tools for data extraction and transformation. Data is maintained both in its raw format and as Delta Parquet, allowing users to access it directly through Power BI Direct Lake. FCA includes standard reports that provide an overview of data and allow users to customize or create their own reports using the data model. Fabric's open platform enables integration with external data sources for further analysis as needed.
 
-⚠️ Caution: The FCA solution accelerator is not an official Microsoft product! It is a solution accelerator, which can help you implement a cost monitoring solution within and for Fabric. Consequently, there is no official support provided, and there remains a potential risk of system failures.
+⚠️ Caution: The FCA solution accelerator is not an official Microsoft product! It is a solution accelerator, which can help you implement a cost monitoring solution within and for Fabric. Consequently, there is no official support provided, and there remains a potential risk of failures.
 
 ## Content
 
-> 🏗️ The solution is currently in a Preview Version state and should not be widely shared publicly on the networks yet. We'll release it to everyone on a different GitHub repository by summer's end.
+> 🏗️ The solution is currently in a Preview Version state and should not be widely shared publicly on the networks yet. We'll release it to everyone on a different GitHub repository by September 2025.
 
 ### Architecture
 
@@ -179,4 +179,3 @@ Ideas/Suggestions: Submit ideas and suggestions as issues in this repository.
 Bug Reports: A backlog is maintained on the project issues page. If you encounter problems or have suggestions, add an entry to the issues section.
 
 Important: Support tickets should not be opened for issues related to these templates. For any questions or concerns about the templates, create an issue in this repository.
-
