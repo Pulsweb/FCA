@@ -41,12 +41,12 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 | **Page Name** | FinOps Phase [🔗](https://learn.microsoft.com/en-us/cloud-computing/finops/framework/finops-framework#lifecycle) | **Purpose**                                                     | **Sample**                                                     |
 | ----- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Home** | Inform | The page presents a summary of key financial metrics, some of which are already included in the cost of capacity, while others are not | Savings Benefits due to RI<br /><br />Impact on the Pause / Spark<br /> |
-| **Summary** | Inform | The page provides an overview of cost per capacities across different regions, helping stakeholders to understand cost distributions and resource allocations within a specified timeframe |  |
-| **Capacity Usage** | Optimize | The page is designed to enhance efficiency by illustrating how capacity is being utilized, enabling stakeholders to monitor and optimize resource allocation effectively |  |
-| **Reservation** | Optimize | The page aims to reduce cloud waste by providing a comprehensive view of reservation-related data to verify the total usage of the reservation across the different capacities and a specified timeframe |  |
-| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively |  |
-| **Support** |                                                              | This page is designed to facilitate the learning and comprehension of the specific aspects of fabric costs and the contents of this report. |            |
+| **Home** | Inform | The page presents a summary of key financial metrics, some of which are already included in the cost of capacity, while others are not | Savings Benefits due to RI<br />![Report_Home1](./media/Report_Home1.png)<br />Impact on the Pause / Spark<br />![Report_Home2](./media/Report_Home1.png) |
+| **Summary** | Inform | The page provides an overview of cost per capacities across different regions, helping stakeholders to understand cost distributions and resource allocations within a specified timeframe | ![Report_Home2](./media/Report_Home1.png) |
+| **Capacity Usage** | Optimize | The page is designed to enhance efficiency by illustrating how capacity is being utilized, enabling stakeholders to monitor and optimize resource allocation effectively | ![Report_Home2](./media/Report_Home1.png) |
+| **Reservation** | Optimize | The page aims to reduce cloud waste by providing a comprehensive view of reservation-related data to verify the total usage of the reservation across the different capacities and a specified timeframe | ![Report_Home2](./media/Report_Home1.png) |
+| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively | ![Report_Home2](./media/Report_Home1.png) |
+| **Support** |                                                              | This page is designed to facilitate the learning and comprehension of the specific aspects of fabric costs and the contents of this report. | ![Report_Home2](./media/Report_Home1.png) |
 
 #### Data Agent
 
