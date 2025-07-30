@@ -154,6 +154,8 @@ To create reservation export, on the Azure portal , search for **Cost Management
 
 - Open the **Load FCA E2E** Data pipeline and Run the Pipeline once
 
+![Load FCA E2E Notebook](./media/Setup_NotebookExecution.png)
+
 ℹ️ The pipeline can be scheduled for daily loads ([Scheduled data pipeline runs](https://learn.microsoft.com/en-us/fabric/data-factory/pipeline-runs#scheduled-data-pipeline-runs)).
 
 ### 4 - (Optional) Create the Data Agent
