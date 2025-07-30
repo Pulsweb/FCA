@@ -12,7 +12,7 @@ Customers may not always clearly distinguish between costs that are included or 
 
 Fabric Cost Analysis (short: FCA) is a solution to enable holistic monitoring of Microsoft Fabric Cost with the help of Microsoft Fabric.
 
-FSA has the goal to provide a holistic view specified on Microsoft Fabric aspect and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservation and particularity of the platform for a more fine granular data analysis. 
+FSA has the goal to provide a holistic view specified on Microsoft Fabric aspects and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservations and particularity of the platform for a more finer data analysis. 
 
 FCA is fully developed utilizing Fabric capabilities, with Pipelines and Notebooks serving as key tools for data extraction and transformation. Data is maintained both in its raw format and as Delta Parquet, allowing users to access it directly through Power BI Direct Lake. FCA includes standard reports that provide an overview of data and allow users to customize or create their own reports using the data model. Fabric's open framework enables integration with external data sources for further analysis as needed.
 
@@ -45,7 +45,7 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 | **Summary** | Inform | The page provides an overview of cost per capacities across different regions, helping stakeholders to understand cost distributions and resource allocations within a specified timeframe | ![Summary Page](./media/Report_Summary.png) |
 | **Capacity Usage** | Optimize | The page is designed to enhance efficiency by illustrating how capacity is being utilized, enabling stakeholders to monitor and optimize resource allocation effectively | ![Capacity Usage Page](./media/Report_CapacityUsage.png) |
 | **Reservation** | Optimize | The page aims to reduce cloud waste by providing a comprehensive view of reservation-related data to verify the total usage of the reservation across the different capacities and a specified timeframe | ![Reservation Page](./media/Report_Reservation.png) |
-| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively | ![Cost Details Page](./media/Report_CostDetails.png) |
+| **Cost Detail** | Operate | The page offers a detailed view of cost distributions across different categories and resources and includes Year-to-Date calculations to help stakeholders to define, track, and monitor expenses effectively | ![Cost Details Page](./media/Report_CostDetails.png) |
 | **Support** |                                                              | This page is designed to facilitate the learning and comprehension of the specific aspects of fabric costs and the contents of this report. | ![Support Page](./media/Report_Support.png) |
 
 #### Data Agent
@@ -69,7 +69,7 @@ To create an export (Create [Cost Management exports](https://learn.microsoft.co
 ℹ️ FCA will retain only data related to Fabric costs.
 
 Once Data Lake Gen 2 storage account created here are the high levels steps to create an export:
-- Sign in to the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**
+- Sign into the Azure portal at [https://portal.azure.com](https://portal.azure.com/), search for **Cost Management**
 - Select the required scope and select **Exports** in the left navigation menu
 - Select **+ Create**
 - On the Basics tab, select the template = **Cost and usage (FOCUS)**
