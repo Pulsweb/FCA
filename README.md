@@ -12,7 +12,7 @@ Customers may not always clearly distinguish between costs that are included or 
 
 Fabric Cost Analysis (short: FCA) is a solution to enable holistic monitoring of Microsoft Fabric Cost with the help of Microsoft Fabric.
 
-FSA has the goal to provide a more holistic view specified on Microsoft Fabric aspect and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservation and particularity of the platform for a more fine granular data analysis. 
+FSA has the goal to provide a holistic view specified on Microsoft Fabric aspect and particularities (joining Financial and Operational forces) on top of the various information, which can be extracted from Azure Cost Management, personal enriched source of information, … allowing its users to analyze at a very high level, but also to deep dive into specific usage, reservation and particularity of the platform for a more fine granular data analysis. 
 
 FCA is fully developed utilizing Fabric capabilities, with Pipelines and Notebooks serving as key tools for data extraction and transformation. Data is maintained both in its raw format and as Delta Parquet, allowing users to access it directly through Power BI Direct Lake. FCA includes standard reports that provide an overview of data and allow users to customize or create their own reports using the data model. Fabric's open framework enables integration with external data sources for further analysis as needed.
 
@@ -39,18 +39,22 @@ FCA gathers diverse data in Lakehouse to provide cost insights:
 
 #### Report
 
-| **#** | **Page**                                                     | **Info**                                                     |
-| ----- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **1** | ![image-20250729134234423](C:\Users\romainca\AppData\Roaming\Typora\typora-user-images\image-20250729134234423.png) | Home - Cost overview  - Cost per category  - Warnings  |
-| **2** |                                                              | Summary Page  - Capacities number  - Region number  - Cost per category / capacity |
-| **3** |                                                              | Usage Page  - Detail meters / capacity  - Usage info in regards of the ‘Compute  Pool Capacity Usage CU’ meter |
-| **4** |                                                              | Detail Page  - Detail cost per capacities  - Cost per category / capacity / dates |
-| **5** |                                                              | Reservation Page  - Reservation rate  - Capacities usage of the RI |
-| **6** |                                                              | Support Page  - Architecture  - Learnings  - Links           |
+| **Page Name** | FinOps Phase [🔗](https://learn.microsoft.com/en-us/cloud-computing/finops/framework/finops-framework#lifecycle) | **Purpose**                                                     | **Sample**                                                     |
+| ----- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Home** | Inform | The page presents a summary of key financial metrics, some of which are already included in the cost of capacity, while others are not | Savings Benefits due to RI<br />![Home Page 1](./media/Report_Home1.png)<br />Impact on the Pause / Spark<br />![Home Page 2](./media/Report_Home2.png) |
+| **Summary** | Inform | The page provides an overview of cost per capacities across different regions, helping stakeholders to understand cost distributions and resource allocations within a specified timeframe | ![Summary Page](./media/Report_Summary.png) |
+| **Capacity Usage** | Optimize | The page is designed to enhance efficiency by illustrating how capacity is being utilized, enabling stakeholders to monitor and optimize resource allocation effectively | ![Capacity Usage Page](./media/Report_CapacityUsage.png) |
+| **Reservation** | Optimize | The page aims to reduce cloud waste by providing a comprehensive view of reservation-related data to verify the total usage of the reservation across the different capacities and a specified timeframe | ![Reservation Page](./media/Report_Reservation.png) |
+| **Cost Detail** | Operate | The page offer a detailed view of cost distributions across different categories and resources and include Year-to-Date calculation to help stakeholders to define, track, and monitor expenses effectively | ![Cost Details Page](./media/Report_CostDetails.png) |
+| **Support** |                                                              | This page is designed to facilitate the learning and comprehension of the specific aspects of fabric costs and the contents of this report. | ![Support Page](./media/Report_Support.png) |
 
 #### Data Agent
 
+With a Data Agent on top of the FCA semantic model you can query in natural language Fabric Cost. 
 
+The following provides an example of communication in both English and French.
+
+![FCA Data Agent](./media/FCA_Agent.png)
 
 ## Setup
 
@@ -154,9 +158,7 @@ To create reservation export, on the Azure portal , search for **Cost Management
 
 ### 4 - (Optional) Create the Data Agent
 
-With a Data Agent on top of the FCA you can query in natural language Fabric Cost.
-
-Since it's required additional prerequisites, we made it optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
+Since it's required additional prerequisites, the creation of the Data Agent is optional ([Data Agent prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/how-to-create-data-agent#prerequisites)).
 
 Steps to create the Data Agent:
 - Open the **02_Create_DataAgent** Notebook
@@ -174,6 +176,3 @@ Bug Reports: A backlog is maintained on the project issues page. If you encounte
 
 Important: Support tickets should not be opened for issues related to these templates. For any questions or concerns about the templates, create an issue in this repository.
 
-### Other helpful resources
-
-- ...
