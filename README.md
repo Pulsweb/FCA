@@ -56,6 +56,9 @@ The following provides an example of communication in both English and French.
 
 ![FCA Data Agent](./media/FCA_Agent.png)
 
+And from Teams:
+![FCA Data Agent from Teams](./media/AgentFromTeams.png)
+
 ## Setup
 
 🏃‍♂️‍➡️ Are you ready to try FCA? Let's follow these simple steps:
@@ -168,7 +171,7 @@ Steps to create the Data Agent:
 - Open the **02_Create_DataAgent** Notebook
 - Click "Run All" in the Notebook
 - Navigate to your FCA Workspace and refresh the browser to view the newly created artifact *FCA_Agent* and open it to chat with your data
-- Enhance custom agents in Microsoft Copilot Studio by leveraging insights from FCA Fabric Data Agent, as demonstrated in following video: https://www.youtube.com/watch?v=GCtk2HPxZi8
+- Enhance custom agents in Microsoft Copilot Studio by leveraging insights from FCA Fabric Data Agent and chat in Teams, as demonstrated in following video: https://www.youtube.com/watch?v=GCtk2HPxZi8
 
 ### Support
 
