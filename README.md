@@ -57,6 +57,7 @@ The following provides an example of communication in both English and French.
 ![FCA Data Agent](./media/FCA_Agent.png)
 
 And from Teams:
+
 ![FCA Data Agent from Teams](./media/AgentFromTeams.png)
 
 ## Setup
